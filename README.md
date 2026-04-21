@@ -1,1 +1,0 @@
-# kafka-to-postgres-app
