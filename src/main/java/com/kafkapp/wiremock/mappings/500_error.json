@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/api/mock-response"
+  },
+  "response": {
+    "status": 500,
+    "body": "{\"status\": \"ERROR\", \"code\": 500, \"message\": \"Внутренняя ошибка сервера. Попробуйте позже.\"}",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

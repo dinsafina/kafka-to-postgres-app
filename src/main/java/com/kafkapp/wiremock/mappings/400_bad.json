@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/api/mock-response"
+  },
+  "response": {
+    "status": 400,
+    "body": "{\"status\": \"ERROR\", \"code\": 400, \"message\": \"Некорректные параметры запроса\"}",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/api/mock-response"
+  },
+  "response": {
+    "status": 404,
+    "body": "{\"status\": \"ERROR\", \"code\": 404, \"message\": \"Запрашиваемый ресурс не существует\"}",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

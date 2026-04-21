@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/api/mock-response"
+  },
+  "response": {
+    "status": 403,
+    "body": "{\"status\": \"ERROR\", \"code\": 403, \"message\": \"Недостаточно прав для выполнения операции\"}",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

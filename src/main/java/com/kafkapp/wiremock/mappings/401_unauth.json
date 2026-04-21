@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/api/mock-response"
+  },
+  "response": {
+    "status": 401,
+    "body": "{\"status\": \"ERROR\", \"code\": 401, \"message\": \"Требуется аутентификация\"}",
+    "headers": {
+      "Content-Type": "application/json",
+      "WWW-Authenticate": "Bearer"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/api/mock-response"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"status\": \"SUCCESS\", \"message\": \"Обработка прошла успешно\", \"processedBy\": \"WireMock\"}",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
