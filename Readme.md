@@ -266,7 +266,3 @@ docker compose down -v
 | App      | 8080 |
 
 ---
-
-# Автор
-
-Demo project для практики Kafka + Spring Boot + Postgres
