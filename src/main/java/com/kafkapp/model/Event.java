@@ -36,4 +36,13 @@ public class Event {
 
     @Column(name = "processed_at")
     private ZonedDateTime processedAt = ZonedDateTime.now();
+
+    @Column(name = "status_code")
+    private Integer statusCode;
+
+    @Column(name = "error_message")
+    private String errorMessage;
+
+    @Transient
+    private Integer mockStatus;
 }

@@ -68,6 +68,7 @@ Partition → Data → + → Add Single Message
 
 4. Вставить JSON в поле **Value**:
 
+Для статус-кода 200:
 ```json
 {
   "eventId": "evt-12345",
@@ -76,6 +77,18 @@ Partition → Data → + → Add Single Message
   "amount": 4999.99,
   "currency": "RUB",
   "timestamp": "2026-04-19T10:00:00Z"
+}
+```
+Для статус-кода 500:
+```json
+{
+"eventId": "evt-500-test",
+"userId": "user-500",
+"type": "ORDER_CREATED",
+"amount": 5000.00,
+"currency": "RUB",
+"timestamp": "2026-04-21T15:30:00Z",
+"mockStatus": 500
 }
 ```
 
@@ -97,7 +110,7 @@ docker exec -it kafka kafka-topics \
 ```
 
 ### Отправка сообщения
-
+Для статус-кода 200 (без заголовка):
 ```bash
 docker exec -it kafka bash -c "echo '{
 \"eventId\":\"evt-12345\",
@@ -109,6 +122,10 @@ docker exec -it kafka bash -c "echo '{
 }' | kafka-console-producer \
 --topic events-topic \
 --bootstrap-server localhost:9092"
+```
+Для статус-кода 500 (с заголовком X-Mock-Status):
+```bash
+docker exec -it kafka bash -c "echo '{\"eventId\":\"evt-500\",\"userId\":\"user2\",\"type\":\"TEST\",\"amount\":200,\"currency\":\"RUB\",\"timestamp\":\"2026-04-21T12:00:00Z\",\"mockStatus\":500}' | kafka-console-producer --topic events-topic --bootstrap-server localhost:9092"
 ```
 
 ---
@@ -259,7 +276,7 @@ docker compose down -v
 # Порты
 
 | Сервис   | Порт |
-| -------- | ---- |
+|----------|------|
 | Kafka    | 9092 |
 | Postgres | 5432 |
 | WireMock | 8081 |
